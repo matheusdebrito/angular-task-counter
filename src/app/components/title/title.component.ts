@@ -12,7 +12,6 @@ export class TitleComponent {
   btnMobile(){
     let divMenu = this.appRoot.querySelector(".submenu")
     divMenu.classList.toggle("active")
-    console.log("funcionando")
   }
 
   constructor(){
