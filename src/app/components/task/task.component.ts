@@ -43,6 +43,8 @@ export class TaskComponent {
     this.tarefa=""
     localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
     }
+
+    this.verificaTarefas()
   }
 
   adicionarDias(i:number){
