@@ -35,16 +35,16 @@ export class TaskComponent {
       this.tarefas.push({
         name: x,
         dias: 0,
-        ultimaConlusão: ""
+        ultimaConclusao: 0
       })
     this.tarefa=""
     localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
     }
-    this.verificaTarefas()
   }
 
   adicionarDias(i:number){
     this.tarefas[i].dias += 1
+    this.tarefas[i].ultimaConclusao = new Date().getTime()
     localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
 
   }
@@ -55,11 +55,31 @@ export class TaskComponent {
     this.verificaTarefas()
   }
 
+  verificaConstancia(){
+
+    for (let t = 0; t < this.tarefas.length; t++){
+      const dataAtual = new Date().getTime()
+      const dataInicial = this.tarefas[t].ultimaConclusao
+
+      const diferencaEmMilissegundos = dataAtual - dataInicial;
+
+      const horasPassadas = diferencaEmMilissegundos / (1000 * 60 * 60);
+
+      console.log(`Tarefa ${this.tarefas[t].name} Passaram-se ${horasPassadas} horas.`);
+
+      if (horasPassadas > 24) {
+        this.tarefas[t].dias = 0
+      }
+    }
+  }
+
   constructor(){
 
     this.recuperaDados()
 
     this.verificaTarefas()
+
+    this.verificaConstancia()
   }
 
 }
