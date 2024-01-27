@@ -112,4 +112,26 @@
   justify-content: space-evenly;
 }
 
+@media screen and (max-width: 500px) {
+  #formulario input{
+    width: 100%;
+  }
+
+  .container{
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  .task{
+    width: 90%;
+  }
+
+  .contador{
+    border: none;
+    border-top: solid 2px gray;
+    width: 100%;
+  }
+
+}
+
 
