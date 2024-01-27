@@ -24,6 +24,7 @@ export class TaskComponent {
     let tarefasStorage:any = localStorage.getItem("tarefas")
     if(tarefasStorage.length > 0){
       this.tarefas = JSON.parse(tarefasStorage)
+      console.log("teste")
     }
   }
 
