@@ -37,7 +37,8 @@ export class TaskComponent {
       this.tarefas.push({
         name: x,
         dias: 0,
-        ultimaConclusao: 0
+        ultimaConclusao: 0,
+        dia: 0
       })
     this.tarefa=""
     localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
@@ -45,9 +46,16 @@ export class TaskComponent {
   }
 
   adicionarDias(i:number){
-    this.tarefas[i].dias += 1
-    this.tarefas[i].ultimaConclusao = new Date().getTime()
-    localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
+    let dia = new Date().getDate()
+
+    if (this.tarefas[i].dia === dia){
+      alert("Você só pode concluir a tarefa uma vez por dia!")
+    } else {
+      this.tarefas[i].dias += 1
+      this.tarefas[i].ultimaConclusao = new Date().getTime()
+      this.tarefas[i].dia = new Date().getDate()
+      localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
+    }
 
   }
 
