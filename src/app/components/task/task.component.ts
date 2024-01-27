@@ -22,12 +22,11 @@ export class TaskComponent {
 
   recuperaDados = () =>{
     let tarefasStorage:any = localStorage.getItem("tarefas")
-    let tarefasJSON = JSON.parse(tarefasStorage)
-    // if(tarefasJSON.length > 0){
-    //   this.tarefas = JSON.parse(tarefasStorage)
-    // }
-    console.log(tarefasStorage)
-    console.log(tarefasJSON)
+    if(tarefasStorage != null){
+      if(JSON.parse(tarefasStorage).length > 0){
+        this.tarefas = JSON.parse(tarefasStorage)
+      }
+    }
   }
 
   adicionarTarefa(x:string){
