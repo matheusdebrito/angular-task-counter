@@ -1,0 +1,25 @@
+<div id="input">
+  <h1>Add Task</h1>
+  <div id="formulario">
+    <input type="text" [(ngModel)]="tarefa" placeholder="Task" (keydown.enter)="adicionarTarefa(tarefa)">
+    <button (click)="adicionarTarefa(tarefa)"  id="btn">Adicionar</button>
+  </div>
+</div>
+<div id="semTarefas" *ngIf="semTarefas">
+  <img src="../../../assets/lupa.png" alt="" id="imagemLupa">
+  <h2>Nenhuma Tarefa Adicionada!</h2>
+
+</div>
+<div class="container" *ngFor="let t of tarefas; let i = index">
+  <div class="task">
+    <p>{{tarefas[i].name}}</p>
+    <div class="botoes">
+      <button class="botao-concluida" (click)="adicionarDias(i)">Concluida</button>
+      <button class="botao-remover" (click)="removerTarefa(i)">Remover</button>
+
+    </div>
+  </div>
+  <div class="contador">
+    <p>Dias consecutivos: {{tarefas[i].dias}}</p>
+  </div>
+</div>

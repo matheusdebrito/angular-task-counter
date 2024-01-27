@@ -1,0 +1,12 @@
+.tasks{
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasks app-task{
+  width: 90%;
+}

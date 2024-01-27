@@ -1,0 +1,115 @@
+#input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#input h1{
+  width: 100%;
+  text-align: center;
+  color: #1976d2;
+  margin: 2rem;
+  text-transform: uppercase;
+}
+
+#formulario{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#formulario input{
+  border: none;
+  border: solid 2px #1976d2;
+  border-radius: 10px;
+  padding: .2rem .5rem;
+  width: 30%;
+  margin-right: 1rem;
+}
+
+#btn{
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  padding: .2rem .5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#semTarefas{
+  width: 100%;
+  text-align: center;
+  color: #1976d2;
+  margin-top: 3rem;
+}
+
+#imagemLupa{
+  width: 5%;
+}
+
+.container{
+  border: solid 2px #1976d2;
+  margin: 1rem 0rem;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+}
+
+.task{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.botoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.botao-concluida{
+  border: solid 2px #1976d2;
+  border-radius: 5px;
+  color: #1976d2;
+  font-weight: bold;
+  cursor: pointer;
+  padding: .2rem;
+  margin: .2rem;
+}
+
+.botao-remover{
+  border: solid 2px red;
+  border-radius: 5px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  padding: .2rem;
+  margin: .2rem;
+}
+
+.botao-concluida:hover{
+  background-color: #1976d2;
+  border: solid 2px white;
+  color: white;
+}
+
+.botao-remover:hover{
+  background-color: red;
+  border: solid 2px white;
+  color: white;
+}
+
+.contador{
+  width: 30%;
+  border-left: solid 2px gray;
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
