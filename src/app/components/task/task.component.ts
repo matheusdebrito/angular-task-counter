@@ -22,9 +22,9 @@ export class TaskComponent {
 
   recuperaDados = () =>{
     let tarefasStorage:any = localStorage.getItem("tarefas")
-    if(JSON.parse(tarefasStorage).length > 0){
+    let tarefasJSON = JSON.parse(tarefasStorage)
+    if(tarefasJSON.length > 0){
       this.tarefas = JSON.parse(tarefasStorage)
-      console.log("teste")
     }
   }
 
@@ -66,7 +66,7 @@ export class TaskComponent {
 
       const horasPassadas = diferencaEmMilissegundos / (1000 * 60 * 60);
 
-      console.log(`Tarefa ${this.tarefas[t].name} Passaram-se ${horasPassadas} horas.`);
+      // console.log(`Tarefa ${this.tarefas[t].name} Passaram-se ${horasPassadas} horas.`);
 
       if (horasPassadas > 24) {
         this.tarefas[t].dias = 0
