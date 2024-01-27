@@ -10,7 +10,8 @@
 .menu{
   background-color: #1976d2;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   align-items: center;
 }
 

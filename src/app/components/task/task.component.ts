@@ -10,9 +10,7 @@ export class TaskComponent {
   semTarefas: boolean = false
   tarefa:string = ""
   tarefas: any[] = []
-
   numeroDias:number = 0
-  dias:string = `Dias consecutivos: ${this.numeroDias}`
 
   verificaTarefas = () => {
     if(this.tarefas.length <= 0){
@@ -36,7 +34,8 @@ export class TaskComponent {
     } else {
       this.tarefas.push({
         name: x,
-        dias: 0
+        dias: 0,
+        ultimaConlusão: ""
       })
     this.tarefa=""
     localStorage.setItem("tarefas", JSON.stringify(this.tarefas))
