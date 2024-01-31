@@ -79,7 +79,7 @@ export class TaskComponent {
 
       // console.log(`Tarefa ${this.tarefas[t].name} Passaram-se ${horasPassadas} horas.`);
 
-      if (horasPassadas > 24) {
+      if (horasPassadas > 34) {
         this.tarefas[t].dias = 0
       }
     }
